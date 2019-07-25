@@ -23,7 +23,8 @@ class Student
         grade TEXT
         )
     SQL
-    DB[:namespace :db do
+    DB[:conn].execute(sql) 
+    namespace :db do
   desc 'migrate changes to your database'
   task :migrate => :environment do
     Student.create_table
