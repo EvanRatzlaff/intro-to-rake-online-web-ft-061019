@@ -8,6 +8,7 @@ desc 'outputs hola to the terminal'
   task :hola do
     puts "hola de Rake!"
   end
+end
 namespace :db do
   desc 'migrate changes to your database'
   task :migrate => :environment do
@@ -18,3 +19,6 @@ namespace :db do
     require_relative './db/seeds.rb'
     end
 end
+task :environment do
+  require_relative './config/environment'
+  end
