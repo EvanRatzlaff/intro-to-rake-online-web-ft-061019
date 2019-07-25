@@ -1,5 +1,5 @@
 namespace :greeting do
-desc 'outputs hello to the terminal'
+desc 'outputs hello to the terminl'
 task :hello do
   puts "hello from Rake!"
 end
